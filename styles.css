@@ -94,7 +94,7 @@ body {
 }
 
 .search-bar > input {
-  width: min(100%, 700px);
+  width: min(100%,500px);
   height: 16px;
   border: none;
   background-color: #e2e8f0;
@@ -197,4 +197,129 @@ body {
   margin: 0;
   font-size: 24px;
   font-weight: bold;
+}
+
+.main-content {
+  background-color: #e2e8f0;
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  grid-template-rows: 1fr 1fr;
+  padding: 24px;
+  gap: 24px;
+}
+
+.projects-section {
+  grid-column: 1;
+  grid-row: 1 / -1;  
+}
+
+
+.announcements {
+  padding: 24px;
+}
+
+.main-title {
+  margin: 12px 0 0 0 ;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.projects-section,
+.announcements-section,
+.trending-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  box-sizing: border-box;
+  height: 200px;
+  background-color: white;
+  border-radius: 8px;
+  border-left: 8px solid #eab308;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 28px 1fr 32px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.15);
+
+}
+
+.projects {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.project-description {
+  color: #737373;
+  margin: 0;
+  height: 100px;
+  overflow: hidden;
+}
+
+.card-controls svg {
+  height: 24px;
+}
+
+.card-controls > button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.card-controls {
+  align-self: end;
+  justify-self: end;
+}
+
+.announcements-box {
+  height: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 32px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.announcement-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.announcement-description {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  color: #737373;
+}
+
+.announcement {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.announcement:not(:last-child) {
+  border-bottom: 1px solid #d1d5db;
+}
+
+.trending-box {
+  height: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 32px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 14px;
 }
